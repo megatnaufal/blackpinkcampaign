@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BLACKPINK - YG Entertainment</title>
+  <style>
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Fixed Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      padding: 20px;
+      z-index: 100;
+    }
+
+    header .logo img {
+      height: 80px;
+    }
+
+    header nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    header nav ul li {
+      margin-left: 20px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    header nav ul li a:hover {
+      color: #f1c40f;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #f1c40f;
+    }
+
+    .artist-info {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .artist-info img {
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .artist-info h3 {
+      margin: 20px 0;
+    }
+
+    .artist-bio {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin: 20px 0;
+    }
+
+    .artist-discography {
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .artist-discography h3 {
+      font-size: 1.8rem;
+      color: #f1c40f;
+      margin-bottom: 15px;
+    }
+
+    .discography-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .discography-list li {
+      background-color: #333;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+    }
+
+    /* Adjust for fixed navbar */
+    body {
+      padding-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <header>
+    <div class="logo">
+      <img src="image/yg-logo.png" alt="YG Entertainment">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#artists">Artists</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Artist Information Section -->
+  <section class="content">
+    <div class="artist-info">
+      <h2>BLACKPINK</h2>
+      <img src="image/blackpink.jpg" alt="BLACKPINK">
+      <h3>BLACKPINK is a South Korean girl group formed by YG Entertainment</h3>
+      <p class="artist-bio">
+        BLACKPINK debuted in 2016 and has become one of the most iconic K-pop groups globally. Known for their powerful performances, catchy music, and fierce fashion, the group has set multiple records and reached global stardom. The members are Jisoo, Jennie, Rosé, and Lisa.
+      </p>
+    </div>
+
+    <div class="artist-discography">
+      <h3>Discography</h3>
+      <ul class="discography-list">
+        <li><strong>Album: The Album (2020)</strong><br>Hits include: "How You Like That", "Lovesick Girls"</li>
+        <li><strong>Album: Square Up (2018)</strong><br>Hits include: "Ddu-Du Ddu-Du", "Forever Young"</li>
+        <li><strong>Album: Blackpink in Your Area (2018)</strong><br>Hits include: "Boombayah", "Whistle"</li>
+        <li><strong>Single: Kill This Love (2019)</strong><br>Hits include: "Kill This Love", "Don’t Know What To Do"</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 YG Entertainment. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

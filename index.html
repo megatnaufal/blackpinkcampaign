@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Born Pink Campaign Asia Tour</title>
+  <style>
+    /* General Body Styling */
+    body {
+      background: black url('star-giphy.gif') no-repeat center center fixed;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000000; /* Black */
+      color: #FFFFFF; /* White */
+    }
+
+    /* Top Horizontal Navigation Bar */
+    .top-nav {
+      width: 100%;
+      background-color: #000000; /* Black */
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Logo Style */
+    .top-nav .logo a {
+      color: white; /* Vibrant Pink */
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .top-nav .logo a:hover {
+      color: #FF69B4; /* Light Pink */
+    }
+
+    /* Navigation Links */
+    .top-nav .nav-links a {
+      text-decoration: none;
+      color: #FFFFFF; /* White */
+      font-size: 1.1rem;
+      margin: 0 15px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-nav .nav-links a:hover {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: #FFFFFF; /* White */
+    }
+
+    /* Vertical Sidebar Navigation */
+    .vertical-nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      height: calc(100% - 60px);
+      width: 60px;
+      background-color: black; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .vertical-nav img {
+      width: 40px;
+      height: 40px;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .vertical-nav img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Main Content Styling */
+    .main-content {
+      margin-left: 80px;
+      padding: 20px;
+      margin-top: 80px; /* Adjust for the top navigation bar */
+    }
+
+    /* Banner Section */
+    .banner {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    /* Slideshow Styling */
+    .slideshow-container {
+      position: relative;
+      max-width: 90%;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .slide p {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+      margin-top: -50px;
+      position: relative;
+    }
+
+    /* About Us Section Styling */
+    .about-section {
+      margin: 40px 0;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #FF69B4; /* Vibrant Pink */
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .about-section a {
+      text-decoration: none;
+      color: #FF69B4; /* Vibrant Pink */
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .about-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: black; 
+      color: #D0D0D0; /* Light Grey */
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #FF69B4; /* Vibrant Pink */
+      text-decoration: none;
+    }
+
+    /* Help Section */
+    .help-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .help-section button {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .help-section button:hover {
+      background-color: pink; /* Light Pink */
+    }
+
+    .contact-info {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    /* Navigation Buttons Styling */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+	/* Modal Popup Styling */
+	.popup {
+	  display: none;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-color: rgba(0, 0, 0, 0.7);
+	  justify-content: center;
+	  align-items: center;
+	  z-index: 1001;
+	}
+
+	.popup-content {
+	  background-color: #222;
+	  color: white;
+	  padding: 30px;
+	  border-radius: 10px;
+	  text-align: center;
+	  position: relative;
+	  width: 80%;  /* Adjust width if necessary */
+	}
+
+	.popup-close-btn {
+	  position: absolute;
+	  top: 10px;  /* Position button closer to the top */
+	  right: 10px;
+	  background-color: transparent;
+	  color: white;
+	  border: none;
+	  font-size: 1.5rem;
+	  cursor: pointer;
+	}
+
+	.popup-close-btn:hover {
+	  color: #FF69B4; /* Vibrant Pink */
+	}
+
+
+    /* Close Button Styling */
+    .popup-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .popup-close-btn:hover {
+      color: #FF69B4; /* Vibrant Pink */
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-nav">
+    <div class="logo">
+      <a href="index.html">Born Pink Campaigns</a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blackpink-campaign.html">Campaigns</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Vertical Sidebar Navigation -->
+  <div class="vertical-nav">
+    <a href="http://www.youtube.com/@BLACKPINK" target="_blank"><img src="image/youtube_logo.png" alt="YouTube"></a>
+    <a href="https://www.tiktok.com/@bp_tiktok" target="_blank"><img src="image/tiktok_logo.jpg" alt="TikTok"></a>
+    <a href="https://www.instagram.com/blackpinkofficial" target="_blank"><img src="image/insta_logo.jpg" alt="Instagram"></a>
+    <a href="https://www.instagram.com/blackpinkofficial" target="_blank"><img src="image/x_logo.png" alt="X"></a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Banner Section -->
+    <div class="banner">
+      <h1>Born Pink Campaigns Asia Tour</h1>
+      <p>Click the picture for more details</p>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <a href="thailand-tour.html" class="slide active">
+        <img src="image2/blackpink-world-tour-thailand.jpeg" alt="Thailand">
+        <p>Thailand - Songkhla</p>
+      </a>
+      <a href="japan-tour.html" class="slide">
+        <img src="image2/blackpink-world-tour-japan.png" alt="Japan">
+        <p>Japan - Osaka</p>
+      </a>
+      <a href="china-tour.html" class="slide">
+        <img src="image2/blackpink-world-tour-china.png" alt="China">
+        <p>China - Beijing</p>
+      </a>
+      <a href="malaysia-tour.html" class="slide">
+        <img src="image2/blackpink-world-tour-malaysia.jpeg" alt="Malaysia">
+        <p>Malaysia - Kuala Lumpur</p>
+      </a>
+
+      <!-- Navigation Buttons -->
+      <button class="prev" onclick="changeSlide(-1)">❮</button>
+      <button class="next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about-section">
+      <h2>About Us</h2>
+      <p>
+        Welcome to the Born Pink Campaign Asia Tour, brought to you by YG Entertainment! 
+        This tour celebrates the global influence of BLACKPINK and their exceptional ability to bring fans together across Asia.
+        We are committed to creating unforgettable experiences with groundbreaking performances and world-class entertainment.
+      </p>
+      <p>
+        Learn more about the journey and the vision of YG Entertainment:
+        <a href="about-us.html">Click here</a>
+      </p>
+    </div>
+
+    <!-- Help Section -->
+    <div class="help-section">
+      <button onclick="toggleContactInfo()">Need help? Click here</button>
+      <div class="contact-info">
+        <p>If you have any inquiries, please <a href="contact.html">contact us</a>.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <button id="closePopupBtn" class="popup-close-btn">×</button>
+      <h2>LET'S BE OUR VOLUNTEER FOR NEXT YEAR 2026!</h2>
+      <p>Send your emails to receive any news about volunteer opportunities later on!</p>
+      <a href="mailto:volunteer@bornpinkcampaign.com?subject=Volunteer%20Application" class="popup-button">
+        <button>Send Email</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Copyright Reserved <a href="copyright.html" target="_blank"> - Click Here</a></p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function changeSlide(direction) {
+      const slides = document.querySelectorAll('.slide');
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      showSlide(currentIndex);
+      clearInterval(slideInterval);  // Stop the automatic slideshow when user clicks a button
+    }
+
+    function startAutoSlide() {
+      slideInterval = setInterval(() => {
+        const slides = document.querySelectorAll('.slide');
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }, 3000);
+    }
+
+    // Initial slide display
+    showSlide(currentIndex);
+    startAutoSlide();  // Start automatic slideshow
+
+    // Toggle the help section contact info
+    function toggleContactInfo() {
+      const contactInfo = document.querySelector('.contact-info');
+      contactInfo.style.display = contactInfo.style.display === 'block' ? 'none' : 'block';
+    }
+  
+    // Modal Popup Display Functionality
+    window.onload = function () {
+      setTimeout(function () {
+        document.getElementById('popup').style.display = 'flex';
+      }, 2000); // Popup will appear after 2 seconds
+    }
+
+    // Close the Popup when clicking the button
+    document.getElementById('closePopupBtn').onclick = function () {
+      document.getElementById('popup').style.display = 'none';
+    };
+  </script>
+</body>
+</html>

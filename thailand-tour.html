@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Born Pink World Tour in Thailand</title>
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: black url('starry-background.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    /* Top Horizontal Navigation Bar */
+    .top-nav {
+      width: 100%;
+      background-color: #000000; /* Black */
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Logo Style */
+    .top-nav .logo a {
+      color: white; /* Vibrant Pink */
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .top-nav .logo a:hover {
+      color: #FF69B4; /* Light Pink */
+    }
+
+    /* Navigation Links */
+    .top-nav .nav-links a {
+      text-decoration: none;
+      color: #FFFFFF; /* White */
+      font-size: 1.1rem;
+      margin: 0 15px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-nav .nav-links a:hover {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: #FFFFFF; /* White */
+    }
+
+    /* Vertical Sidebar Navigation */
+    .vertical-nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      height: calc(100% - 60px);
+      width: 60px;
+      background-color: black; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .vertical-nav img {
+      width: 40px;
+      height: 40px;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .vertical-nav img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      background: rgba(0, 0, 0, 0.9);
+      border-bottom: 2px solid #ffffff;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      text-transform: uppercase;
+      color: white;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Layout Styling */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    /* Section Styles */
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .right {
+      padding: 10px;
+    }
+
+    .right h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #f8f8f8;
+      text-transform: uppercase;
+    }
+
+    .right p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    /* Description Section */
+    .description {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      color: #ccc;
+    }
+
+    .description h2 {
+      font-size: 1.8rem;
+      color: #FF69B4;
+      margin-bottom: 10px;
+    }
+
+    .description p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .description a {
+      color: #FF69B4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+	
+	.content-box {
+	  background-color: #FF69B4; /* Vibrant Pink */
+	  padding: 8px 25px; /* Adjusted padding for a wider but smaller box */
+	  text-align: center;
+	  border-radius: 10px;
+	  margin-top: 20px;
+	  width: 80%; /* Adjusted width to make it wider */
+	  max-width: 500px; /* Maximum width to control box size */
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	.content-box a {
+	  color: white;
+	  text-decoration: none;
+	  font-size: 1.1rem; /* Slightly increased font size */
+	  font-weight: bold;
+	  display: inline-block;
+	  padding: 6px 18px; /* Reduced padding to keep height smaller */
+	  border-radius: 5px;
+	  background-color: transparent; /* Black */
+	  transition: background-color 0.3s ease;
+	}
+
+	.content-box a:hover {
+	  background-color: #FF69B4; /* Vibrant Pink */
+	  color: #000000; /* Black */
+	}
+	
+	    /* Help Section */
+    .help-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .help-section button {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .help-section button:hover {
+      background-color: pink; /* Light Pink */
+    }
+
+    .contact-info {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: black; 
+      color: #D0D0D0; /* Light Grey */
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #FF69B4; /* Vibrant Pink */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="top-nav">
+    <div class="logo">
+      <a href="index.html">Born Pink Campaigns</a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blackpink-campaign.html">Campaigns</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  
+  <!-- Vertical Sidebar Navigation -->
+  <div class="vertical-nav">
+    <a href="http://www.youtube.com/@BLACKPINK" target="_blank"><img src="image/youtube_logo.png" alt="YouTube"></a>
+    <a href="https://www.tiktok.com/@bp_tiktok" target="_blank"><img src="image/tiktok_logo.jpg" alt="TikTok"></a>
+    <a href="https://www.instagram.com/blackpinkofficial" target="_blank"><img src="image/insta_logo.jpg" alt="Instagram"></a>
+    <a href="https://www.instagram.com/blackpinkofficial" target="_blank"><img src="image/x_logo.png" alt="X"></a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Born Pink Campaigns in Thailand</h1>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <div class="layout">
+      <!-- Left Section -->
+      <div class="left">
+        <img src="image/thailand-stadium.jpg" alt="Tinsulanonda Stadium">
+        <p style="text-align:center; margin-top:10px;">
+          <a href="https://maps.app.goo.gl/UPSLf4q4p1fn9DHC9" style="color: pink; text-decoration: none;" target="_blank">
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right">
+        <h2>Concert Details</h2>
+        <p>
+          <strong>Date:</strong> March 11, 2025<br>
+          <strong>Time:</strong> 7:00 PM<br>
+          <strong>Day:</strong> Saturday<br>
+          <strong>Address:</strong> Tinsulanonda Stadium, Songkhla<br>
+          <strong>Ticket Price:</strong> ฿3,000 - ฿15,000
+        </p>
+      </div>
+    </div>
+
+    <!-- Description Section -->
+    <div class="description">
+      <h2>Campaign in Thailand , Songkhla - Music School for Art Education</h2>
+      <p>
+        Blackpink’s <strong>Music School for Art Education</strong> campaign, launched in Songkhla, Thailand, is a unique initiative aimed at providing young people with the opportunity to dive deeper into the world of music. This campaign targets individuals between the ages of 10 and 20, offering them the chance to learn music in a detailed, structured way, from the basics to more advanced techniques. With Blackpink as the face of the campaign, the program is designed to inspire and empower the next generation of musicians in Thailand, helping them develop their musical skills while fostering creativity and artistic expression.
+		</p>
+		
+	   <p>
+		Through this campaign, participants will gain valuable knowledge and practical experience in various aspects of music, including theory, performance, and production. By learning from industry professionals and artists, young individuals will have the opportunity to explore their passion for music and develop their talents in a supportive and educational environment. This initiative not only helps nurture local talent but also encourages a deeper appreciation for the arts, inspiring the youth of Thailand to pursue their musical dreams and contribute to the cultural landscape of the future.
+	    </p>
+
+        <p class="content-box">
+          <a href="thailand-content.html">Click here for more content</a>
+        </p>	
+
+    </div>
+  </div>
+  
+	 <!-- Help Section -->
+	<div class="help-section">
+	  <button onclick="toggleContactInfo()">Need help? Click here</button>
+	  <div class="contact-info">
+		<p>If you have any inquiries, please <a href="contact.html">contact us</a>.</p>
+	  </div>
+
+	  <!-- Back Button -->
+	  <button onclick="goBack()">← Back</button> <!-- Inserted back button here -->
+	</div>
+
+	  <!-- Footer -->
+	  <footer>
+		<p>© Copyright Reserved <a href="copyright.html"target="_blank"> - Click Here</a></p>
+	  </footer>
+		  
+	<script>
+	  function toggleContactInfo() {
+		var contactInfo = document.querySelector('.contact-info');
+		contactInfo.style.display = (contactInfo.style.display === 'none' || contactInfo.style.display === '') ? 'block' : 'none';
+	  }
+
+	  function goBack() {
+		window.history.back(); // This will go back to the previous page in the browser history
+	  }
+	</script>
+</body>
+</html>

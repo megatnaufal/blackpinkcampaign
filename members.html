@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLACKPINK Members</title>
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000000; /* Black */
+      color: #FFFFFF; /* White */
+    }
+
+    /* Top Horizontal Navigation Bar */
+    .top-nav {
+      width: 100%;
+      background-color: #000000; /* Black */
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Logo Style */
+    .top-nav .logo a {
+      color: #FF69B4; /* Vibrant Pink */
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .top-nav .logo a:hover {
+      color: #FF69B4; /* Light Pink */
+    }
+
+    /* Navigation Links */
+    .top-nav .nav-links a {
+      text-decoration: none;
+      color: #FFFFFF; /* White */
+      font-size: 1.1rem;
+      margin: 0 15px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-nav .nav-links a:hover {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: #FFFFFF; /* White */
+    }
+
+    /* Vertical Sidebar Navigation */
+    .vertical-nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      height: calc(100% - 60px);
+      width: 60px;
+      background-color: black; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .vertical-nav img {
+      width: 40px;
+      height: 40px;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .vertical-nav img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Main Content Styling */
+    .main-content {
+      margin-left: 80px;
+      padding: 20px;
+      margin-top: 80px; /* Adjust for the top navigation bar */
+    }
+
+    /* Members Section */
+    .members-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .member-card {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.1);
+      width: 280px;
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+    }
+
+    .member-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .member-info {
+      padding: 20px;
+    }
+
+    .member-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .member-info p {
+      font-size: 1rem;
+      color: #ccc;
+      margin: 10px 0;
+    }
+
+    .member-info .highlight {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    /* Help Section */
+    .help-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .help-section button {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .help-section button:hover {
+      background-color: pink; /* Light Pink */
+    }
+
+    .contact-info {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: black; 
+      color: #D0D0D0; /* Light Grey */
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #FF69B4; /* Vibrant Pink */
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-nav">
+    <div class="logo">
+      <a href="index.html">Born Pink Campaigns</a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blackpink-campaign.html">Campaigns</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Vertical Sidebar Navigation -->
+  <div class="vertical-nav">
+    <a href="http://www.youtube.com/@BLACKPINK"target="_blank"><img src="image/youtube_logo.png" alt="YouTube"></a>
+    <a href="https://www.tiktok.com/@bp_tiktok"target="_blank"><img src="image/tiktok_logo.jpg" alt="TikTok"></a>
+    <a href="https://www.instagram.com/blackpinkofficial"target="_blank"><img src="image/insta_logo.jpg" alt="Instagram"></a>
+    <a href="https://www.instagram.com/blackpinkofficial"target="_blank"><img src="image/x_logo.png" alt="X"></a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1><center>BLACKPINK MEMBERS</center></h1>
+    <div class="grid-container">
+      <!-- Members Section -->
+      <section class="members-section">
+
+        <!-- Jisoo -->
+        <div class="member-card">
+          <img src="image/jisoo.jpg" alt="Jisoo">
+          <div class="member-info">
+            <h2>Jisoo</h2>
+            <p><strong>Full Name:</strong> Kim Ji-soo</p>
+            <p><strong>Born:</strong> January 3, 1995 (Age: 29)</p>
+            <p><strong>Role:</strong> Lead Vocalist, Visual</p>
+            <p>Jisoo, the eldest member of BLACKPINK, is known for her elegance, humor, and captivating visuals. Often referred to as the "visual queen" of the group, Jisoo has also ventured into acting, starring in the Korean drama "Snowdrop."</p>
+            <p class="highlight">Fun Fact: Jisoo loves painting and is known for her witty personality!</p>
+          </div>
+        </div>
+
+        <!-- Jennie -->
+        <div class="member-card">
+          <img src="image/jennie.jpg" alt="Jennie">
+          <div class="member-info">
+            <h2>Jennie</h2>
+            <p><strong>Full Name:</strong> Jennie Kim</p>
+            <p><strong>Born:</strong> January 16, 1996 (Age: 28)</p>
+            <p><strong>Role:</strong> Main Rapper, Lead Vocalist</p>
+            <p>Raised in New Zealand, Jennie is known for her chic and confident stage presence. As the first member to release a solo track titled "SOLO," she continues to inspire fans with her versatility in music and fashion.</p>
+            <p class="highlight">Fun Fact: Jennie has a passion for photography and owns multiple vintage cameras.</p>
+          </div>
+        </div>
+
+        <!-- Rosé -->
+        <div class="member-card">
+          <img src="image/rose.jpg" alt="Rosé">
+          <div class="member-info">
+            <h2>Rosé</h2>
+            <p><strong>Full Name:</strong> Park Chae-young (Roséanne Park)</p>
+            <p><strong>Born:</strong> February 11, 1997 (Age: 27)</p>
+            <p><strong>Role:</strong> Main Vocalist, Lead Dancer</p>
+            <p>Rosé was born in New Zealand and raised in Australia. Her unique vocal tone and emotional delivery have made her a standout performer. She’s also skilled at playing guitar and piano, adding a personal touch to her music.</p>
+            <p class="highlight">Fun Fact: Rosé's favorite food is avocado toast!</p>
+          </div>
+        </div>
+
+        <!-- Lisa -->
+        <div class="member-card">
+          <img src="image/lisa.jpg" alt="Lisa">
+          <div class="member-info">
+            <h2>Lisa</h2>
+            <p><strong>Full Name:</strong> Lalisa Manoban</p>
+            <p><strong>Born:</strong> March 27, 1997 (Age: 27)</p>
+            <p><strong>Role:</strong> Main Dancer, Lead Rapper</p>
+            <p>Hailing from Thailand, Lisa is the group's main dancer and lead rapper. Her outstanding dance skills have earned her recognition as one of the best dancers in K-pop. In addition, her solo career has seen incredible success with hits like "LALISA."</p>
+            <p class="highlight">Fun Fact: Lisa is fluent in Thai, Korean, English, and Japanese!</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Help Section -->
+      <div class="help-section">
+        <button onclick="toggleContactInfo()">Need help? Click here</button>
+        <div class="contact-info">
+          <p>If you have any inquiries, please <a href="contact.html">contact us</a>.</p>
+        </div>
+
+        <!-- Back Button -->
+        <button onclick="goBack()">← Back</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© Copyright Reserved <a href="copyright.html"target="_blank"> - Click Here</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleContactInfo() {
+      var contactInfo = document.querySelector('.contact-info');
+      contactInfo.style.display = (contactInfo.style.display === 'none' || contactInfo.style.display === '') ? 'block' : 'none';
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

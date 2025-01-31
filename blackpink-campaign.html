@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Born Pink Campaign Asia Tour</title>
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      background-size: cover;
+      color: white;
+    }
+
+    /* Top Horizontal Navigation Bar */
+    .top-nav {
+      width: 100%;
+      background-color: black;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Logo Style */
+    .top-nav .logo a {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .top-nav .logo a:hover {
+      color: #FF69B4; /* Light Pink */
+    }
+
+    /* Navigation Links */
+    .top-nav .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .top-nav .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      margin: 0 15px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-nav .nav-links a:hover {
+      background-color: #FF69B4;
+      color: #fff;
+    }
+
+    /* Vertical Sidebar Navigation */
+    .vertical-nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      height: calc(100% - 60px);
+      width: 60px;
+      background-color: black; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .vertical-nav img {
+      width: 40px;
+      height: 40px;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .vertical-nav img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Main Content Layout */
+    .main-content {
+      margin-top: 80px; /* For top navigation bar */
+      margin-left: 80px; /* For sidebar */
+      padding: 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .grid-item {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid white;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.05);
+    }
+
+    .grid-item h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .grid-item img {
+      width: 50%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .grid-item button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #FF69B4;;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .grid-item button:hover {
+      background-color: #ff7b7b;
+    }
+
+    /* Help Section */
+    .help-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .help-section button {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .help-section button:hover {
+      background-color: pink; /* Light Pink */
+    }
+
+    .contact-info {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: black; 
+      color: #D0D0D0; /* Light Grey */
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #FF69B4; /* Vibrant Pink */
+      text-decoration: none;
+    
+  </style>
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<div class="top-nav">
+  <div class="logo">
+    <a href="index.html">Born Pink Campaigns</a> <!-- Your brand name or logo -->
+  </div>
+  <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blackpink-campaign.html">Campaigns</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+  </div>
+</div>
+
+  <!-- Vertical Sidebar Navigation -->
+  <div class="vertical-nav">
+    <a href="http://www.youtube.com/@BLACKPINK"target="_blank"><img src="image/youtube_logo.png" alt="YouTube"></a>
+    <a href="https://www.tiktok.com/@bp_tiktok"target="_blank"><img src="image/tiktok_logo.jpg" alt="TikTok"></a>
+    <a href="https://www.instagram.com/blackpinkofficial"target="_blank"><img src="image/insta_logo.jpg" alt="Instagram"></a>
+    <a href="https://www.instagram.com/blackpinkofficial"target="_blank"><img src="image/x_logo.png" alt="X"></a>
+  </div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <h1>Born Pink Campaigns Asia Tour</h1>
+  <div class="grid-container">
+    <!-- Thailand -->
+    <div class="grid-item">
+      <img src="image/thailand-flag.jpg" alt="Thailand">
+      <h2>Thailand</h2>
+      <a href="thailand-tour.html">
+        <button>View More</button>
+      </a>
+    </div>
+    <!-- Japan -->
+    <div class="grid-item">
+      <img src="image/japan-flag.jpg" alt="Japan">
+      <h2>Japan</h2>
+      <a href="japan-tour.html">
+        <button>View More</button>
+      </a>
+    </div>
+    <!-- China -->
+    <div class="grid-item">
+      <img src="image/china-flag.jpg" alt="China">
+      <h2>China</h2>
+      <a href="china-tour.html">
+        <button>View More</button>
+      </a>
+    </div>
+    <!-- Malaysia -->
+    <div class="grid-item">
+      <img src="image/malaysia-flag.jpg" alt="Malaysia">
+      <h2>Malaysia</h2>
+      <a href="malaysia-tour.html">
+        <button>View More</button>
+      </a>
+    </div>
+  </div>
+
+    <!-- Help Section -->
+    <div class="help-section">
+      <button onclick="toggleContactInfo()">Need help? Click here</button>
+      <div class="contact-info">
+        <p>If you have any inquiries, please <a href="contact.html">contact us</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Copyright Reserved <a href="copyright.html"target="_blank"> - Click Here</a></p>
+  </footer>
+
+  <script>
+    // Toggle the help section contact info
+    function toggleContactInfo() {
+      const contactInfo = document.querySelector('.contact-info');
+      contactInfo.style.display = contactInfo.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About YG Entertainment</title>
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: black url('starry-background.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+	
+	/* Top Horizontal Navigation Bar */
+    .top-nav {
+      width: 100%;
+      background-color: #000000; /* Black */
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Logo Style */
+    .top-nav .logo a {
+      color: #FF69B4; /* Vibrant Pink */
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .top-nav .logo a:hover {
+      color: #FF69B4; /* Light Pink */
+    }
+
+    /* Navigation Links */
+    .top-nav .nav-links a {
+      text-decoration: none;
+      color: #FFFFFF; /* White */
+      font-size: 1.1rem;
+      margin: 0 15px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .top-nav .nav-links a:hover {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: #FFFFFF; /* White */
+    }
+
+    /* Vertical Sidebar Navigation */
+    .vertical-nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      height: calc(100% - 60px);
+      width: 60px;
+      background-color: black; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .vertical-nav img {
+      width: 40px;
+      height: 40px;
+      margin: 20px 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .vertical-nav img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      padding: 50px;
+      background: rgba(0, 0, 0, 0.85);
+      border-bottom: 2px solid #fff;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      color: white;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    }
+	    /* What We Do Box */
+    .what-we-do-box {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .what-we-do-box h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .what-we-do-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .what-we-do-box ul li {
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+
+
+    /* Section Styling */
+    .section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .section img {
+      width: 48%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-text {
+      width: 48%;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .section-text h3 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+	  /* Help Section */
+    .help-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .help-section button {
+      background-color: #FF69B4; /* Vibrant Pink */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .help-section button:hover {
+      background-color: pink; /* Light Pink */
+    }
+
+    .contact-info {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: black; 
+      color: #D0D0D0; /* Light Grey */
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #FF69B4; /* Vibrant Pink */
+      text-decoration: none;
+    
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="top-nav">
+    <div class="logo">
+      <a href="index.html">Born Pink Campaign</a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blackpink-campaign.html">Campaigns</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  
+  <!-- Vertical Sidebar Navigation -->
+  <div class="vertical-nav">
+    <a href="http://www.youtube.com/@BLACKPINK"target="_blank"><img src="image/youtube_logo.png" alt="YouTube"></a>
+    <a href="https://www.tiktok.com/@bp_tiktok"target="_blank"><img src="image/tiktok_logo.jpg" alt="TikTok"></a>
+    <a href="https://www.instagram.com/blackpinkofficial"target="_blank"><img src="image/insta_logo.jpg" alt="Instagram"></a>
+    <a href="https://www.instagram.com/blackpinkofficial"target="_blank"><img src="image/x_logo.png" alt="X"></a>
+  </div>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Discover YG Entertainment</h1>
+  </header>
+
+  <!-- About YG Section -->
+  <section class="section">
+    <img src="image/yg-logo.png" alt="YG Entertainment Logo">
+    <div class="section-text">
+      <h3>About YG Entertainment</h3>
+      <p>Founded in 1996 by Yang Hyun-suk, YG Entertainment has grown to become a leading force in the K-pop industry. Known for its innovation, YG Entertainment has pioneered a genre-defying approach to music, blending hip-hop, pop, and R&B influences to create global sensations like BIGBANG, 2NE1, BLACKPINK, and more.</p>
+      <p>As one of the "Big Three" entertainment companies, YG Entertainment continues to dominate the entertainment landscape, with its artists consistently breaking records and redefining the global pop culture scene.</p>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="section">
+    <img src="image/yg-headquarters.jpg" alt="YG Headquarters in Seoul">
+    <div class="section-text">
+      <h3>Our Location</h3>
+      <p>Located in the heart of Seoul, South Korea, YG Entertainment's headquarters is a hub of creativity, where musical innovation and artistry thrive. As one of the most influential agencies in K-pop, YG is strategically placed at the center of global trends in entertainment and fashion.</p>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section class="section">
+    <div class="section-text">
+      <h3>Our Journey</h3>
+      <p>YG Entertainment's journey began with the success of artists like Sechs Kies and Jinusean, which laid the foundation for a music empire. In the years since its establishment, YG has expanded its roster to include some of the most iconic groups in K-pop history, including BIGBANG, 2NE1, and BLACKPINK. The company's history is marked by its unwavering commitment to pushing boundaries and evolving with the times.</p>
+    </div>
+    <img src="image/yg-history.jpg" alt="YG History">
+  </section>
+
+  <!-- CEO Section -->
+  <section class="section">
+    <img src="image/yang-hyun-suk.png" alt="Yang Hyun-suk, CEO of YG Entertainment">
+    <div class="section-text">
+      <h3>Meet Our Founder</h3>
+      <p>Yang Hyun-suk, the visionary founder and CEO of YG Entertainment, has played an instrumental role in shaping the company's direction. Formerly a member of the influential group Seo Taiji and Boys, Yang's deep understanding of the industry, combined with his creative approach to music production, has led YG Entertainment to global prominence.</p>
+    </div>
+  </section>
+
+  <!-- What YG Does Section -->
+  <section class="section">
+    <div class="section-text">
+      <h3>What We Do</h3>
+      <p>At YG Entertainment, we specialize in discovering, developing, and nurturing world-class talent. Our artists are known for their unparalleled performances, genre-defying music, and global influence. In addition to artist management, YG is involved in music production, international collaborations, fashion, and event management, making us a central player in both the K-pop and global entertainment industries.</p>
+    </div>
+    <img src="image/yg-artists.jpg" alt="YG Artists in Performance">
+  </section>
+  
+    <!-- New Box for Vision, Mission, Core Values, and Achievements -->
+  <section class="what-we-do-box">
+    <h3>Our Vision, Mission, and Achievements</h3>
+    <ul>
+      <li style="color: white;"><strong>Vision:</strong> To be the world's leading entertainment company, inspiring generations with groundbreaking music, performances, and creativity.</li>
+      <li style="color: white;"><strong>Mission:</strong> To nurture and promote top-tier talent, innovate within the global music industry, and create iconic cultural moments through music and entertainment.</li>
+      <li style="color: white;"><strong>Core Values:</strong></li>
+      <ul>
+        <li><strong>Innovation:</strong> Pushing the boundaries of music and performance.</li>
+        <li><strong>Authenticity:</strong> Staying true to artistic identity and originality.</li>
+        <li><strong>Excellence:</strong> Striving for perfection in every aspect of entertainment.</li>
+        <li><strong>Global Influence:</strong> Bringing K-pop and Korean culture to the world.</li>
+      </ul>
+      <li style="color: white;"><strong>Achievements:</strong></li>
+      <ul>
+        <li>First K-pop group (BLACKPINK) to headline Coachella.</li>
+        <li>Over 80 million YouTube subscribers, making YG one of the most influential entertainment companies.</li>
+        <li>Multiple Billboard #1 hits and world tours selling out stadiums globally.</li>
+        <li>Revolutionized K-pop with groundbreaking groups like BIGBANG, 2NE1, and BLACKPINK.</li>
+      </ul>
+    </ul>
+  </section>
+
+
+	 <!-- Help Section -->
+	<div class="help-section">
+	  <button onclick="toggleContactInfo()">Need help? Click here</button>
+	  <div class="contact-info">
+		<p>If you have any inquiries, please <a href="contact.html">contact us</a>.</p>
+	  </div>
+
+	  <!-- Back Button -->
+	  <button onclick="goBack()">← Back</button> <!-- Inserted back button here -->
+	</div>
+
+	  <!-- Footer -->
+	  <footer>
+		<p>© Copyright Reserved <a href="copyright.html"target="_blank"> - Click Here</a></p>
+	  </footer>
+		  
+	<script>
+	  function toggleContactInfo() {
+		var contactInfo = document.querySelector('.contact-info');
+		contactInfo.style.display = (contactInfo.style.display === 'none' || contactInfo.style.display === '') ? 'block' : 'none';
+	  }
+
+	  function goBack() {
+		window.history.back(); // This will go back to the previous page in the browser history
+	  }
+	</script>
+
+</body>
+</html>
